@@ -48,6 +48,11 @@ body {
   font-family: 'Lacquer', sans-serif;
   background-color: black;
 }
-
+.playerTotal {
+  color: aquamarine;
+  font-size: 50px;
+  font-family: 'Lacquer', sans-serif;
+  background-color: black;
+}
 
 
