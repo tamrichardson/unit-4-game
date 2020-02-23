@@ -1,0 +1,53 @@
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://vignette.wikia.nocookie.net/wicca/images/9/9c/Eerie_Forest_Windows_Background.jpg/revision/latest?cb=20120726215508&path-prefix=en);
+    background-size: cover;
+  }
+
+  .jumbotron h1 {
+    color: aqua;
+    text-align: center;
+  }
+  
+  .jumbotron p {
+    color: aqua;
+    text-align: center;
+    font-size: 40px;
+  }
+  
+
+  .jumbotron {
+    background-image: url(https://cdn.pixabay.com/photo/2017/05/31/13/09/ice-2360346_960_720.jpg);
+    background-size: cover;
+    font-family: 'Lacquer', sans-serif;
+    text-align: center;
+    
+  }
+
+  
+.card {
+    width: 50%;
+  }
+  .card-img-top {
+    width: 100%;
+    height: 100%;
+  }
+
+ .randomNumberCard {
+   color: aquamarine;
+   font-size: 50px;
+   font-family: 'Lacquer', sans-serif;
+   background-color: black;
+ }
+
+ .winsCard {
+  color: aquamarine;
+  font-size: 50px;
+  font-family: 'Lacquer', sans-serif;
+  background-color: black;
+}
+
+
+
