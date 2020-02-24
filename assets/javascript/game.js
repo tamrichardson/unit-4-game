@@ -8,99 +8,97 @@ $(document).ready(function () {
 
     //displays random number in h5 on card
     $("h5").text(computerNum)
-  });
+
+    //generates random numbers for gem images
+    var purple = Math.floor(Math.random() * 10) + 1;
+    var blue = Math.floor(Math.random() * 10) + 1;
+    var red = Math.floor(Math.random() * 10) + 1;
+    var yellow = Math.floor(Math.random() * 10) + 1;
+
+    var wins = 0;
+    var losses = 0;
+
+    var playerScore = 0;
+    $("playerScore").text(playerScore)
 
 
-  //generates random numbers for gem images
-  var purple = Math.floor(Math.random() * 10) + 1;
-  var blue = Math.floor(Math.random() * 10) + 1;
-  var red = Math.floor(Math.random() * 10) + 1;
-  var yellow = Math.floor(Math.random() * 10) + 1;
+    //adds numbers together and displays player score
+    $('#purple').click(() => {
+      playerScore = playerScore + purple;
+      $("h4").text(playerScore);
+      if (playerScore === computerNum) {
+        win();
+        reset();
 
-  var wins = 0;
-  var losses = 0;
+      } else if (playerScore > computerNum) {
+        lose();
+        reset();
 
-  var playerScore = 0;
-  $("playerScore").text(playerScore)
+      }
+    });
 
-  //adds numbers together and displays player score
-  $('#purple').click(() => {
-    playerScore = playerScore + purple;
-    $("h4").text(playerScore);
-    if (playerScore === computerNum) {
-      win();
-      reset();
+    $("#red").click(() => {
+      playerScore = playerScore + red;
+      $("h4").text(playerScore);
+      if (playerScore === computerNum) {
+        win();
+        reset();
 
-    } else if (playerScore > computerNum) {
-      lose();
-      reset();
+      } else if (playerScore > computerNum) {
+        lose();
+        reset();
+      }
+    });
 
+    $("#blue").click(() => {
+      playerScore = playerScore + blue;
+      $("h4").text(playerScore);
+      if (playerScore === computerNum) {
+        win();
+        reset();
+
+} else if (playerScore > computerNum) {
+        lose();
+        reset();
+      }
+    });
+
+    $("#yellow").click(() => {
+      playerScore = playerScore + yellow;
+      $("h4").text(playerScore);
+      if (playerScore === computerNum) {
+        win();
+        reset();
+
+      } else if (playerScore > computerNum) {
+        lose();
+        reset();
+
+      }
+    });
+
+    //if (playerScore === computerNum) {
+    //alert("You win!");
+    //}
+    //else if (playerscore >= computerNum) {
+    //alert("You lose!");
+    // }
+
+    function win() {
+      wins = wins = +1;
+      $("#wins").text(wins)
+      reset()
+    }
+
+    function lose() {
+      losses = losses = +1;
+      $("#losses").text(losses + )
+      reset()
+    }
+
+    function reset() {
+      playerScore = 0;
+      $('#playerScore').text(playerScore);
     }
   });
-
-  $("#red").click(() => {
-    playerScore = playerScore + red;
-    $("h4").text(playerScore);
-    if (playerScore === computerNum) {
-      win();
-      reset();
-
-    } else if (playerScore > computerNum) {
-      lose();
-      reset();
-
-    }
-  });
-
-  $("#blue").click(() => {
-    playerScore = playerScore + blue;
-    $("h4").text(playerScore);
-    if (playerScore === computerNum) {
-      win();
-      reset();
-
-    } else if (playerScore > computerNum) {
-      lose();
-      reset();
-
-    }
-  });
-
-  $("yellow").click(() => {
-    playerScore = playerScore + yellow;
-    $("h4").text(playerScore);
-    if (playerScore === computerNum) {
-      win();
-      reset();
-
-    } else if (playerScore > computerNum) {
-      lose();
-      reset();
-
-    }
-  });
-
-  if (playerScore === computerNum) {
-    alert("You win!");
-  }
-  else if (playerscore >= computerNum) {
-    alert("You lose!");
-  }
-
-  function win() {
-    wins = wins = 1;
-    $("#wins").text(wins)
-    reset()
-  }
-
-  function lose() {
-    losses = losses = 1;
-    $("#losses").text(losses)
-    reset()
-  }
-
-  function reset() {
-    playerScore = 0;
-    $('#playerScore').text(playerScore);
-  }
 });
