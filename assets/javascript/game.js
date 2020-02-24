@@ -4,16 +4,16 @@ $(document).ready(function () {
   $("a").on("click", function () {
 
     //generates random number
-    var computerNum = Math.floor(Math.random() * 100) + 1;
+    var computerNum = Math.floor(Math.random() * 120) + 19;
 
     //displays random number in h5 on card
     $("h5").text(computerNum)
 
     //generates random numbers for gem images
-    var purple = Math.floor(Math.random() * 10) + 1;
-    var blue = Math.floor(Math.random() * 10) + 1;
-    var red = Math.floor(Math.random() * 10) + 1;
-    var yellow = Math.floor(Math.random() * 10) + 1;
+    var purple = Math.floor(Math.random() * 12) + 1;
+    var blue = Math.floor(Math.random() * 12) + 1;
+    var red = Math.floor(Math.random() * 12) + 1;
+    var yellow = Math.floor(Math.random() * 12) + 1;
 
     var wins = 0;
     var losses = 0;
@@ -57,7 +57,7 @@ $(document).ready(function () {
         win();
         reset();
 
-} else if (playerScore > computerNum) {
+      } else if (playerScore > computerNum) {
         lose();
         reset();
       }
@@ -77,28 +77,27 @@ $(document).ready(function () {
       }
     });
 
-    //if (playerScore === computerNum) {
-    //alert("You win!");
-    //}
-    //else if (playerscore >= computerNum) {
-    //alert("You lose!");
-    // }
+    if (playerScore === computerNum) {
+      alert("You win!");
+    }
+    else if (playerscore >= computerNum) {
+      alert("You lose!");
+    }
 
     function win() {
-      wins = wins = +1;
+      wins++;
       $("#wins").text(wins)
-      reset()
     }
 
     function lose() {
-      losses = losses = +1;
-      $("#losses").text(losses + )
-      reset()
+      losses++;
+      $("#losses").text(losses)
     }
 
     function reset() {
       playerScore = 0;
-      $('#playerScore').text(playerScore);
+      $("playerScore").text(playerScore);
+      $("randonNumberCard").text(computerNum)
     }
   });
 });
