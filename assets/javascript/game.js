@@ -86,19 +86,19 @@ $(document).ready(function () {
 
     function win() {
       wins++;
-      playerScore = 0;
-      computerNum = 0;
+
       $("#wins").text(wins)
       $("h3").text("you Win!");
+      $("h4").text("")
       reset()
     }
 
     function lose() {
       losses++;
-      playerScore = 0;
-      computerNum = 0;
+
       $("#losses").text(losses)
       $("h3").text("you Lose!");
+      $("h4").text("")
       reset()
     }
 
