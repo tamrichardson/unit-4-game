@@ -6,8 +6,13 @@ $(document).ready(function () {
     //generates random number
     var computerNum = Math.floor(Math.random() * 120) + 19;
 
+
+
     //displays random number in h5 on card
     $("h5").text(computerNum)
+
+
+
 
     //generates random numbers for gem images
     var purple = Math.floor(Math.random() * 12) + 1;
@@ -20,6 +25,8 @@ $(document).ready(function () {
 
     var playerScore = 0;
     $("playerScore").text(playerScore)
+
+
 
 
     //adds numbers together and displays player score
@@ -77,27 +84,31 @@ $(document).ready(function () {
       }
     });
 
-    if (playerScore === computerNum) {
-      alert("You win!");
-    }
-    else if (playerscore >= computerNum) {
-      alert("You lose!");
-    }
-
     function win() {
       wins++;
+      playerScore = 0;
+      computerNum = 0;
       $("#wins").text(wins)
+      $("h3").text("you Win!");
+      reset()
     }
 
     function lose() {
       losses++;
+      playerScore = 0;
+      computerNum = 0;
       $("#losses").text(losses)
+      $("h3").text("you Lose!");
+      reset()
     }
 
     function reset() {
-      playerScore = 0;
-      $("playerScore").text(playerScore);
-      $("randonNumberCard").text(computerNum)
+      $("playerScore").text(playerScore = "");
+      $("randonNumberCard").text(computerNum = "")
     }
+
   });
+
+
+
 });

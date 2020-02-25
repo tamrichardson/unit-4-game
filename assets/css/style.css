@@ -23,8 +23,7 @@ body {
     background-size: cover;
     font-family: 'Lacquer', sans-serif;
     text-align: center;
-    
-  }
+    }
 
   
 .card {
@@ -49,6 +48,13 @@ body {
   background-color: black;
 }
 .playerScore {
+  color: aquamarine;
+  font-size: 50px;
+  font-family: 'Lacquer', sans-serif;
+  background-color: black;
+}
+
+.result {
   color: aquamarine;
   font-size: 50px;
   font-family: 'Lacquer', sans-serif;
